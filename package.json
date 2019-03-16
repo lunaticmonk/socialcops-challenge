@@ -1,0 +1,23 @@
+{
+  "name": "socialcops-attempt-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunaticmonk/socialcops-attempt-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lunaticmonk/socialcops-attempt-2/issues"
+  },
+  "homepage": "https://github.com/lunaticmonk/socialcops-attempt-2#readme",
+  "dependencies": {
+    "rsync": "^0.6.1"
+  }
+}
