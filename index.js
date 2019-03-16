@@ -7,7 +7,12 @@ const path = require("path");
 const rsync = new Rsync()
   .shell("ssh")
   .flags("az")
-  .source(`${path.join(__dirname, "data/")}`)
+  .source(
+    `ubuntu@ec2-13-127-188-152.ap-south-1.compute.amazonaws.com:${path.join(
+      __dirname,
+      "data/"
+    )}`
+  )
   .destination(`${path.join(__dirname, "data/")}`);
 
 rsync.execute(function(error, code, cmd) {
