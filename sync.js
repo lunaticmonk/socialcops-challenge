@@ -32,8 +32,6 @@ async function sync() {
            * update the event in db. no need for updateDatabase since it will explicitly called by file watcher.
            *
            */
-          console.log(path.join(__dirname, localPath));
-          console.log(`contentOfFile: ${contentOfFile}`);
 
           const pathToWrite = path.join(__dirname, localPath);
           await writeToFile(pathToWrite, contentOfFile);

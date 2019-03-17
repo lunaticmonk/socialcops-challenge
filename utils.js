@@ -21,7 +21,6 @@ async function getFileDetails() {
             path.join(__dirname, SYNC_DIRECTORY, file)
           );
           const id = await getHash(path.join(SYNC_DIRECTORY, file));
-          console.log(`id: ${id}`);
           const fileModel = await File.where({ id }).fetch();
           const fileInfo = {
             event: fileModel.get("event"),
@@ -30,7 +29,6 @@ async function getFileDetails() {
             path: fileModel.get("path"),
             updatedAt: fileModel.get("updated_at")
           };
-          console.log(JSON.stringify(fileInfo));
           result.push({
             fileInfo,
             data
@@ -109,7 +107,6 @@ async function updateDatabase(event, filePath) {
       }).save(null, { method: "insert" });
     }
   } catch (error) {
-    console.log(`error: ${error}`);
     return {
       error
     };
